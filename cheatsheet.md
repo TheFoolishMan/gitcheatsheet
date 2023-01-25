@@ -155,3 +155,28 @@ eg: ` git submodule foreach --recursive git checkout . `
 * Execute multiple commands together
 
 ` git restore --staged . && git checkout . `
+
+* Checking which commits changes the specific file
+
+` git log -- <filepath> `
+
+* Get the deleted file back
+
+` git checkout <deleted commit hash>~1 -- <filepath> `
+
+* Repeat command for all submodules
+
+` git submodule foreach --recursive <command> `
+
+* For saving changes temporarily
+
+` git stash `
+
+* For getting temporarily changes stashed earlier
+
+` git stash pop`
+
+* For resolving merge conflicts
+
+` git mergetool`
+
