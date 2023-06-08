@@ -125,6 +125,10 @@ git commit -m "message for all"
 
 ` git checkout <commit-id> <path> `
 
+* to checkout some files from some branch
+
+` git checkout <branch-name> -- <path> `
+
 * gitignore ignores the untracked files but committed files it still commits and not ignore. To ignore them,
 
 ` git rm -r --cached . `     -> to make git forget.
@@ -176,7 +180,14 @@ eg: ` git submodule foreach --recursive git checkout . `
 
 ` git stash pop`
 
+* For saving unstashed changes temporarily
+
+` git stash --keep-index`
+
 * For resolving merge conflicts
 
 ` git mergetool`
 
+* For resolving binary merge conflicts
+
+` git checkout --ours -- path/to/conflicted-file.txt `
